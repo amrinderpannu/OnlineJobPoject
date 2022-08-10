@@ -1,0 +1,165 @@
+
+<div  class="row body">
+    <div class="col-cs-12 ">
+        <form (ngSubmit)="onUpdatingJob()" class="main-form" #f="ngForm">
+
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example1">Job Id</label>
+                <input type="text"
+                class="form-control"
+                ngModel
+                name="jobId"
+                [(ngModel)]="jobIdToUpdate.jobId"
+                required
+                #jobId="ngModel"/>
+                <span class="help-block" *ngIf="!jobId.valid && jobId.touched">Please Enter valid companyId</span>
+                
+            </div>
+
+
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example1">Company Id</label>
+                <input type="text"
+                class="form-control"
+                ngModel
+                name="companyId"
+                [(ngModel)]="jobUpdate.companyId"
+                required
+                #companyId="ngModel"/>
+                <span class="help-block" *ngIf="!companyId.valid && companyId.touched">Please Enter valid companyId</span>
+                
+            </div>
+            
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example1">Company Name</label>
+                <input type="text"
+                class="form-control"
+                ngModel
+                name="companyName"
+                [(ngModel)]="jobUpdate.companyName"
+                #companyName="ngModel"
+                required/>
+                <span class="help-block" *ngIf="!companyName.valid && companyName.touched">Please Enter valid Name</span>
+                
+                </div>
+        
+        
+                <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example1">Job Description</label>
+                <input type="text"
+                class="form-control"
+                ngModel
+                name="jobDescription"
+                [(ngModel)]="jobUpdate.jobDescription"
+                required
+                #jobDescription="ngModel"
+                />
+                <span class="help-block" *ngIf="!jobDescription.valid && jobDescription.touched">Please Enter valid Description</span>
+                
+                </div>
+        
+                <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example1">Job Location</label>
+                <input type="text"
+                class="form-control"
+                ngModel
+                name="jobLocation"
+                [(ngModel)]="jobUpdate.jobLocation"
+                required
+                #jobLocation="ngModel"
+                />
+                <span class="help-block" *ngIf="!jobLocation.valid && jobLocation.touched">Please Enter valid Location</span>
+                
+                </div>
+        
+        
+                <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example1">Job Role</label>
+                <input type="text"
+                class="form-control"
+                ngModel
+                name="jobRole"
+                [(ngModel)]="jobUpdate.jobRole"
+                required
+                #jobRole="ngModel"
+                />
+                <span class="help-block" *ngIf="!jobRole.valid && jobRole.touched">Please Enter valid Role</span>
+                
+                </div>
+        
+        
+                <div class="form-outline mb-4">
+        
+                <label class="form-label" for="form2Example1">Job Title</label>
+                <input type="text"
+                class="form-control"
+                ngModel
+                name="jobTitle"
+                [(ngModel)]="jobUpdate.jobTitle"
+                required
+                #jobTitle="ngModel"
+                />
+                <span class="help-block" *ngIf="!jobTitle.valid && jobTitle.touched">Please Enter valid Title</span>
+                
+                </div>
+        
+        
+                
+                <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example1">Salary</label>
+                <input type="text"
+                class="form-control"
+                ngModel
+                name="salary"
+                [(ngModel)]="jobUpdate.salary"
+                required
+                #salary="ngModel"
+                />
+                <span class="help-block" *ngIf="!salary.valid && salary.touched">Please Enter valid Salary</span>
+                
+                </div>
+        
+                
+                <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example1">Skills Required</label>
+                <input type="text"
+                class="form-control"
+                ngModel
+                name="skillsRequired"
+                [(ngModel)]="jobUpdate.skillsRequired"
+                required
+                #skillsRequired="ngModel"
+                />
+                <span class="help-block" *ngIf="!skillsRequired.valid && skillsRequired.touched">Please Enter valid Skills</span>
+                
+                </div>
+            
+            <!-- Submit button -->
+            <div>
+            <button type="submit" [disabled]="!f.valid" class="btn btn-success btn-block mb-4">Update Job</button>
+        <!--
+            <button type="button" class="btn btn-primary btn-block mb-4" (click)="getJobs()">Get Jobs</button>
+            <button type="button" class="btn btn-primary btn-block mb-4" (click)="loadJobs()">Load Jobs</button>
+            
+        -->
+            </div>
+        </form>
+  </div>
+
+  <div class="wave">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+</div>
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  

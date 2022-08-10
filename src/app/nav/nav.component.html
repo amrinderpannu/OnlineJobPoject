@@ -1,0 +1,88 @@
+<div *ngIf="!isUserLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" style="background-color: #262626;">
+    <div>
+      <a style="color: #11b719; margin-left:50px; font-size: 18px;font-weight: bolder;" routerLink="/login">ONLINE
+        JOB PORTAL</a>
+    </div>
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/register">Sign Up</a>
+      <a nz-button nzType="link" routerLink="/login">Login</a>
+    </div>
+  </nz-header>
+
+  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0" class="mobile-sidenav">
+    <ul class="nav-links" nz-menu nzTheme="dark" nzMode="inline" style="background: #fcfcfc;">
+      <li nz-menu-item>
+        <a routerLink="/register" style="background: #fcfcfc; padding-left: 2rem;">Sign Up</a>
+      </li>
+      <li nz-menu-item>
+        <a  nzType="link" routerLink="/login" style="background: #fcfcfc; padding-left: 2rem;">Login</a>
+      </li>
+    </ul>
+  </nz-sider>
+</div>
+<div *ngIf="isUserLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" style="background-color: #262626;">
+    <div>
+      <a style="color: #11b719; margin-left:50px; font-size: 18px;font-weight: bolder; background: #262626;" routerLink="/user/all-jobs">ONLINE
+        JOB PORTAL</a>
+    </div>
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/user/dashboard" routerLinkActive="active">Dashboard</a>
+      <a nz-button nzType="link" routerLink="/user/all-jobs" routerLinkActive="active">Jobs</a>
+      <a nz-button nzType="link" routerLink="/user/latestJobs" routerLinkActive="active">Latest Jobs</a>
+      <a nz-button nzType="link" routerLink="/user/search-job" routerLinkActive="active">Search</a>
+      <a nz-button nzType="link" routerLink="/user/user-profile" routerLinkActive="active" *ngIf="isAdmin==='no'">Profile</a>
+      <a nz-button nzType="link" routerLink="/user/setting" routerLinkActive="active" *ngIf="isAdmin==='no'">Setting</a>
+      <a nz-button nzType="link" routerLink="/addjob" routerLinkActive="active" *ngIf="isAdmin==='yes'">Add Job</a>
+      <a nz-button nzType="link" routerLink="/editJob" routerLinkActive="active" *ngIf="isAdmin==='yes'" >Edit Job</a>
+      <a nz-button nzType="link" routerLink="/deleteJob" routerLinkActive="active" *ngIf="isAdmin==='yes'" >Delete Job</a>
+      <a nz-button nzType="link" routerLink="/allUsers" routerLinkActive="active" *ngIf="isAdmin==='yes'" >View Users</a>
+      <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+    </div>
+  </nz-header>
+
+  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0" class="mobile-sidenav">
+    <ul class="nav-links" nz-menu  nzMode="inline">
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/user/dashboard" routerLinkActive="active">Dashboard</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/user/all-jobs" routerLinkActive="active">Jobs</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/user/latestJobs" routerLinkActive="active">Latest Jobs</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/user/search-job" routerLinkActive="active">Search</a>
+      </li>
+      <li nz-menu-item *ngIf="isAdmin==='no'">
+        <a nz-button nzType="link" routerLink="/user/user-profile" routerLinkActive="active" >Profile</a>
+      </li>
+      <li nz-menu-item *ngIf="isAdmin==='no'">
+        <a nz-button nzType="link" routerLink="/user/setting" routerLinkActive="active">Setting</a>
+      </li>
+
+      <li nz-menu-item *ngIf="isAdmin==='yes'">
+        <a nz-button nzType="link" routerLink="/addjob" routerLinkActive="active">Add Job</a>
+      </li>
+
+      <li nz-menu-item *ngIf="isAdmin==='yes'">
+        <a nz-button nzType="link" routerLink="/editJob" routerLinkActive="active">Edit Job</a>
+      </li>
+
+      <li nz-menu-item *ngIf="isAdmin==='yes'">
+        <a nz-button nzType="link" routerLink="/deleteJob" routerLinkActive="active">Delete Jobs</a>
+      </li>
+
+      <li nz-menu-item *ngIf="isAdmin==='yes'">
+        <a nz-button nzType="link" routerLink="/allUsers" routerLinkActive="active">View Users</a>
+      </li>
+
+      <li nz-menu-item>
+        <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+      </li>
+
+    </ul>
+  </nz-sider>
+</div>

@@ -1,0 +1,44 @@
+<!--<form (ngSubmit)="onDeleteJob()">
+    <label>Enter the id to delete</label>
+    <input type="text"
+    name="jobId"
+    [(ngModel)]="delJob.jobId"
+    required 
+    #jobId="ngModel"
+    >
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>-->
+
+<div  class="row body">
+    <div class="col-cs-12 ">
+        <form (ngSubmit)="onDeleteJob()" class="main-form" #f="ngForm">
+            <div class="form-outline mb-4">
+                <label class="form-label">Enter the id to delete</label>
+                <input type="text"
+                class="form-control"
+                name="jobId"
+                [(ngModel)]="delJob.jobId"
+                required 
+                #jobId="ngModel">
+                <span class="help-block" *ngIf="!jobId.valid && jobId.touched">Please Enter valid Id</span>                
+            </div>
+            <div>
+                <button type="submit" [disabled]="!f.valid" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--
+<div class="form-outline mb-4">
+    <label class="form-label" for="form2Example1">Job Id</label>
+    <input type="text"
+    class="form-control"
+    ngModel
+    name="jobId"
+    [(ngModel)]="jobIdToUpdate.jobId"
+    required
+    #jobId="ngModel"/>
+    <span class="help-block" *ngIf="!jobId.valid && jobId.touched">Please Enter valid companyId</span>
+    
+</div>
+-->

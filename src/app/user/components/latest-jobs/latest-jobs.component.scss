@@ -1,0 +1,87 @@
+.small-card{
+    display: inline-flex;
+    align-items: center;
+    margin: 0.5rem 1rem;
+    width: 30%;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+
+.job-link{
+  text-decoration: none;
+  color: black;
+}
+
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    //text-align: center;
+    background-color: #f1f1f1;
+    align-items: center;
+    margin: 1rem 0.5rem;
+  }
+
+  .job-card{
+      //width: 25%;
+      //margin: 2.4rem;
+      margin-top: 2rem;
+      align-items: center;
+      //padding: 20px;
+  }
+
+
+.zoom {
+  transition: transform .2s;
+  
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  background: #1aff8c;
+  //color:whitesmoke
+}
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+
+  @media screen and (max-width: 700px) {
+    .column {
+      width: 90%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+

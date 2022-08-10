@@ -1,0 +1,14 @@
+<a routerLink="/user/applyJob" class="job-link">
+<div class="column job-card" *ngFor="let job of jobs">
+
+    <div class="card zoom">
+      <h5>{{job.jobId}}  {{job.jobTitle}} </h5>
+        <p>Company Name {{job.companyName}} </p>
+        <p>Role- Senior Developer</p>
+        <p>Location- {{job.jobLocation}} </p>
+        <p>Salary - {{job.salary}}</p>
+        <p>Skills Rrquired -  {{job.skillsRequired}} </p>
+        <p>Job Description -  {{job.jobDescription}} </p>
+    </div>
+  </div>
+</a>
